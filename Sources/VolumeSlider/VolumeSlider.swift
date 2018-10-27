@@ -35,7 +35,8 @@ class VolumeSliderView : UIView {
         case off = "volume_off", low = "volume_low", mid = "volume_mid", high = "volume_high"
         
         func image()->UIImage? {
-            return UIImage(named: self.rawValue)?.withRenderingMode(.alwaysTemplate)
+//            return UIImage(named: self.rawValue)?.withRenderingMode(.alwaysTemplate)
+            return UIImage(contentsOfFile: self.rawValue + ".png")?.withRenderingMode(.alwaysTemplate)
         }
     }
     
